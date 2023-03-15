@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import base.TestBase;
 
-public class LoginPage extends TestBase{
+public class HomePage extends TestBase{
 	WebDriverWait wait;
 	@FindBy(id = "login2")
 	WebElement loginbtn;
@@ -26,7 +26,7 @@ public class LoginPage extends TestBase{
 	@FindBy(id="nameofuser")
 	public WebElement username;
 	
-	public LoginPage() {
+	public HomePage() {
 		PageFactory.initElements(driver, this);
 	}
 	

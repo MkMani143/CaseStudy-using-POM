@@ -25,18 +25,17 @@ import base.TestBase;
 import commonUtils.Utility;
 import pages.CartPageAfterDlt;
 import pages.CartPageBeforeDlt;
-import pages.LoginPage;
+import pages.HomePage;
 import pages.PlaceOrderPage;
 import pages.SelectMultiItemPage;
 
 public class TestFile extends TestBase{
-	LoginPage loginpage;
+	HomePage loginpage;
 	WebDriverWait wait;
 	SelectMultiItemPage multiItems;
 	CartPageBeforeDlt Beforecart;
 	CartPageAfterDlt Aftercart;
 	PlaceOrderPage order;
-	String P_BeforeDlt;
 	public int cartsize;
 	String del_p_val;
 	public int del_c_size;
@@ -54,7 +53,7 @@ public class TestFile extends TestBase{
 	@Test(priority=1)
 	public void LoginToApp() throws InterruptedException {
 		extentTest=reports.createTest("Login Test");
-		loginpage=new LoginPage();
+		loginpage=new HomePage();
 		loginpage.login();
 		WebElement verifyName = loginpage.username;
 		wait = new WebDriverWait(driver,Duration.ofSeconds(10));

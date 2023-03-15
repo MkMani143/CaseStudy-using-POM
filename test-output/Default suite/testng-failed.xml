@@ -5,6 +5,7 @@
     <classes>
       <class name="testScripts.TestFile">
         <methods>
+          <include name="additem" invocation-numbers="0 1"/>
           <include name="finalise"/>
           <include name="close"/>
           <include name="close"/>
