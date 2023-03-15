@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import base.TestBase;
 
-public class SelectMultiItemPage extends TestBase{
+public class AddItemToCartPage extends TestBase{
 	Alert alert;
 	WebDriverWait wait;
 	Actions actions;
@@ -24,23 +24,15 @@ public class SelectMultiItemPage extends TestBase{
 	@FindBy(xpath="//div/a[@class='btn btn-success btn-lg']")
 	public WebElement addtocartbtn; 
 	
-	public SelectMultiItemPage() {
+	public AddItemToCartPage() {
 		PageFactory.initElements(driver, this);
 	}
 		
 	public void select(String categories,String products) {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		wait = new WebDriverWait(driver,Duration.ofSeconds(30));
-//		String strpath="//a[text()='"+categories+"']";
-//		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(strpath))).click();
-//		actions.scrollByAmount(0, 500).perform();
-//		String strpath1="//a[text()='"+products+"']";
-//		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(strpath1))).click();
-//		wait.until(ExpectedConditions.elementToBeClickable(addtocartbtn));
-//		addtocartbtn.click();
-	
 		WebElement category = driver.findElement(By.partialLinkText(categories));
-		category.click();
+		wait.until(ExpectedConditions.elementToBeClickable(category)).click();
 		WebElement product =driver.findElement(By.partialLinkText(products));
 		wait.until(ExpectedConditions.visibilityOf(product));
 		product.click();

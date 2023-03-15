@@ -27,12 +27,12 @@ import pages.CartPageAfterDlt;
 import pages.CartPageBeforeDlt;
 import pages.HomePage;
 import pages.PlaceOrderPage;
-import pages.SelectMultiItemPage;
+import pages.AddItemToCartPage;
 
 public class TestFile extends TestBase{
 	HomePage loginpage;
 	WebDriverWait wait;
-	SelectMultiItemPage multiItems;
+	AddItemToCartPage multiItems;
 	CartPageBeforeDlt Beforecart;
 	CartPageAfterDlt Aftercart;
 	PlaceOrderPage order;
@@ -63,7 +63,7 @@ public class TestFile extends TestBase{
 	@Test(priority=2,dataProvider = "ProductDetails")
 	  public void additem(String category,String product) {
 		extentTest=reports.createTest("Adding MultipleItem Test");
-		  multiItems = new SelectMultiItemPage();
+		  multiItems = new AddItemToCartPage();
 		  multiItems.select(category,product);
 	  }
 	
@@ -93,7 +93,7 @@ public class TestFile extends TestBase{
 		  Assert.assertNotEquals(BeforecartDlt, AftercartDlt);
 	  }
 	@Test(priority=5)
-	public void finalise() throws InterruptedException {
+	public void Purchase() throws InterruptedException {
 		extentTest=reports.createTest("PlaceOrder Test");
 		  order = new PlaceOrderPage();
 		  order.orderDetails();
