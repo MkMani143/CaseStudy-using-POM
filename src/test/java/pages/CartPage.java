@@ -17,13 +17,13 @@ public class CartPage extends TestBase{
 	public String priceBefore;
 	public String priceAfter;
     WebDriverWait wait;
+	
+    @FindBy(id="cartur")
+	WebElement cartBtn;
     
-	@FindBy(id="cartur")
-	WebElement cart;
-	
-	@FindBy(id="totalp")
+    @FindBy(id="totalp")
 	WebElement priceAmt;
-	
+    
 	@FindBy(xpath="(//a[text()='Delete'])[1]")
 	WebElement deletebtn;
 	
@@ -64,20 +64,16 @@ public class CartPage extends TestBase{
 		PageFactory.initElements(driver, this); 
 	}
 	
-	public void cart() throws InterruptedException {
-		wait=new WebDriverWait(driver, Duration.ofSeconds(30));
-		cart.click();
-		wait.until(ExpectedConditions.visibilityOf(priceAmt));
-		priceBefore = priceAmt.getText();
-		System.out.println(priceBefore);
-		
-		
-	}
+	
 	public void delete() throws InterruptedException {
 		wait = new WebDriverWait(driver,Duration.ofSeconds(30));
+		cartBtn.click();
 		wait.until(ExpectedConditions.visibilityOfAllElements(ItemsInCart));
 		int BeforeDlt = ItemsInCart.size();
 		System.out.println(BeforeDlt);
+		wait.until(ExpectedConditions.visibilityOf(priceAmt));
+		priceBefore = priceAmt.getText();
+		System.out.println(priceBefore);
 		deletebtn.click();
 		Thread.sleep(2000);
 		int AfterDlt = ItemsInCart.size();
@@ -96,7 +92,6 @@ public class CartPage extends TestBase{
 	public void orderDetails() throws InterruptedException{
 		wait = new WebDriverWait(driver,Duration.ofSeconds(30));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 		placeorder.click();		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(name));

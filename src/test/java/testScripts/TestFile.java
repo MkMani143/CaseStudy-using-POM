@@ -60,15 +60,9 @@ public class TestFile extends TestBase{
 	@Test(priority=2,dataProvider = "ProductDetails")
 	  public void additem(String category,String product) {
 		extentTest=reports.createTest("Adding MultipleItem Test");
+		homePage=new HomePage();
 		homePage.selectItems(category, product);
-//		boolean test=false;
-//		for(WebElement verifyList:ItemsInCart) {
-//			if(verifyList.getText().equalsIgnoreCase(product)) {
-//				Assert.assertEquals(verifyList.getText(), product);
-//				test=true;
-//			}
-//		}
-//		  Assert.assertTrue(test);
+		homePage.cart();
 	  }
 	@DataProvider(name="ProductDetails")
 	  public Object[][] getdata() throws CsvValidationException, IOException{
@@ -85,16 +79,15 @@ public class TestFile extends TestBase{
 	
 	@Test(priority=3)
 	  public void cart() throws InterruptedException {
-		extentTest=reports.createTest("Cart page Test(Before)");
+		extentTest=reports.createTest("Cart page Test");
 		cartpage = new CartPage();
-		cartpage .cart();
 		cartpage.delete();
 		  
 	  }
 	
 	@Test(priority=4,dependsOnMethods="cart")
-	  public void del_cart() throws InterruptedException{
-		extentTest=reports.createTest("Cart page Test(After)");
+	  public void purchase() throws InterruptedException{
+		extentTest=reports.createTest("Place Order Test");
 		cartpage.orderDetails();
 		WebElement msg = cartpage.message;
 		Assert.assertTrue(msg.isDisplayed());

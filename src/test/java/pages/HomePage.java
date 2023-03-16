@@ -16,6 +16,7 @@ import base.TestBase;
 public class HomePage extends TestBase{
 	WebDriverWait wait;
 	Alert alert;
+	public String priceBefore;
 	
 	@FindBy(id = "login2")
 	WebElement loginbtn;
@@ -40,6 +41,12 @@ public class HomePage extends TestBase{
 	
 	@FindBy(xpath="//td[2]")
 	public List<WebElement> ItemsInCart;
+	
+	@FindBy(id="cartur")
+	WebElement cartBtn;
+	
+	@FindBy(id="totalp")
+	WebElement priceAmt;
 	
 	public HomePage() {
 		PageFactory.initElements(driver, this);
@@ -67,6 +74,12 @@ public class HomePage extends TestBase{
 		wait.until(ExpectedConditions.alertIsPresent());
 		alert = driver.switchTo().alert();
 		alert.accept();
+		home.click();
+	}
+	
+	public void cart() {
+		wait=new WebDriverWait(driver, Duration.ofSeconds(30));
+		cartBtn.click();
 		home.click();
 	}
 }
