@@ -6,12 +6,9 @@
       <class name="testScripts.TestFile">
         <methods>
           <include name="additem" invocation-numbers="0 1"/>
-          <include name="finalise"/>
           <include name="close"/>
           <include name="close"/>
-          <include name="cart"/>
           <include name="launch"/>
-          <include name="del_cart"/>
           <include name="Reports"/>
         </methods>
       </class> <!-- testScripts.TestFile -->
