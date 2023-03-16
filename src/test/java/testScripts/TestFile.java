@@ -62,7 +62,6 @@ public class TestFile extends TestBase{
 		extentTest=reports.createTest("Adding MultipleItem Test");
 		homePage=new HomePage();
 		homePage.selectItems(category, product);
-		homePage.cart();
 	  }
 	@DataProvider(name="ProductDetails")
 	  public Object[][] getdata() throws CsvValidationException, IOException{
@@ -80,6 +79,8 @@ public class TestFile extends TestBase{
 	@Test(priority=3)
 	  public void cart() throws InterruptedException {
 		extentTest=reports.createTest("Cart page Test");
+		homePage=new HomePage();
+		homePage.cart();
 		cartpage = new CartPage();
 		cartpage.delete();
 		  

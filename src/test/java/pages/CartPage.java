@@ -67,7 +67,6 @@ public class CartPage extends TestBase{
 	
 	public void delete() throws InterruptedException {
 		wait = new WebDriverWait(driver,Duration.ofSeconds(30));
-		cartBtn.click();
 		wait.until(ExpectedConditions.visibilityOfAllElements(ItemsInCart));
 		int BeforeDlt = ItemsInCart.size();
 		System.out.println(BeforeDlt);

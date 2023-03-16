@@ -74,11 +74,11 @@ public class HomePage extends TestBase{
 		wait.until(ExpectedConditions.alertIsPresent());
 		alert = driver.switchTo().alert();
 		alert.accept();
+		home.click();
 	}
 	
 	public void cart() {
 		wait=new WebDriverWait(driver, Duration.ofSeconds(30));
 		cartBtn.click();
-		home.click();
 	}
 }
