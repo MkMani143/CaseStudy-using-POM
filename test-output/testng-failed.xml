@@ -5,10 +5,12 @@
     <classes>
       <class name="testScripts.TestFile">
         <methods>
-          <include name="additem" invocation-numbers="0 1"/>
+          <include name="additem" invocation-numbers="1"/>
           <include name="close"/>
           <include name="close"/>
+          <include name="cart"/>
           <include name="launch"/>
+          <include name="del_cart"/>
           <include name="Reports"/>
         </methods>
       </class> <!-- testScripts.TestFile -->

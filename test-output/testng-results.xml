@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="78166" started-at="2023-03-16T14:32:35 IST" finished-at="2023-03-16T14:33:53 IST">
+  <suite name="Default suite" duration-ms="33293" started-at="2023-03-16T15:18:51 IST" finished-at="2023-03-16T15:19:24 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="78166" started-at="2023-03-16T14:32:35 IST" finished-at="2023-03-16T14:33:53 IST">
+    <test name="Default test" duration-ms="33293" started-at="2023-03-16T15:18:51 IST" finished-at="2023-03-16T15:19:24 IST">
       <class name="testScripts.TestFile">
-        <test-method status="PASS" signature="launch()[pri:0, instance:testScripts.TestFile@706a04ae]" name="launch" is-config="true" duration-ms="52984" started-at="2023-03-16T14:32:35 IST" finished-at="2023-03-16T14:33:28 IST">
+        <test-method status="PASS" signature="launch()[pri:0, instance:testScripts.TestFile@706a04ae]" name="launch" is-config="true" duration-ms="10139" started-at="2023-03-16T15:18:51 IST" finished-at="2023-03-16T15:19:01 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launch -->
-        <test-method status="PASS" signature="Reports()[pri:0, instance:testScripts.TestFile@706a04ae]" name="Reports" is-config="true" duration-ms="1208" started-at="2023-03-16T14:33:28 IST" finished-at="2023-03-16T14:33:29 IST">
+        <test-method status="PASS" signature="Reports()[pri:0, instance:testScripts.TestFile@706a04ae]" name="Reports" is-config="true" duration-ms="1011" started-at="2023-03-16T15:19:01 IST" finished-at="2023-03-16T15:19:02 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Reports -->
-        <test-method status="PASS" signature="LoginToApp()[pri:1, instance:testScripts.TestFile@706a04ae]" name="LoginToApp" duration-ms="5240" started-at="2023-03-16T14:33:29 IST" finished-at="2023-03-16T14:33:35 IST">
+        <test-method status="PASS" signature="LoginToApp()[pri:1, instance:testScripts.TestFile@706a04ae]" name="LoginToApp" duration-ms="4441" started-at="2023-03-16T15:19:02 IST" finished-at="2023-03-16T15:19:06 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginToApp -->
-        <test-method status="PASS" signature="close(org.testng.ITestResult)[pri:0, instance:testScripts.TestFile@706a04ae]" name="close" is-config="true" duration-ms="5" started-at="2023-03-16T14:33:35 IST" finished-at="2023-03-16T14:33:35 IST">
+        <test-method status="PASS" signature="close(org.testng.ITestResult)[pri:0, instance:testScripts.TestFile@706a04ae]" name="close" is-config="true" duration-ms="6" started-at="2023-03-16T15:19:06 IST" finished-at="2023-03-16T15:19:06 IST">
           <params>
             <param index="0">
               <value>
@@ -30,7 +30,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-        <test-method status="PASS" signature="additem(java.lang.String,java.lang.String)[pri:2, instance:testScripts.TestFile@706a04ae]" name="additem" duration-ms="4914" started-at="2023-03-16T14:33:35 IST" data-provider="ProductDetails" finished-at="2023-03-16T14:33:40 IST">
+        <test-method status="PASS" signature="additem(java.lang.String,java.lang.String)[pri:2, instance:testScripts.TestFile@706a04ae]" name="additem" duration-ms="5161" started-at="2023-03-16T15:19:07 IST" data-provider="ProductDetails" finished-at="2023-03-16T15:19:12 IST">
           <params>
             <param index="0">
               <value>
@@ -46,7 +46,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- additem -->
-        <test-method status="PASS" signature="close(org.testng.ITestResult)[pri:0, instance:testScripts.TestFile@706a04ae]" name="close" is-config="true" duration-ms="1" started-at="2023-03-16T14:33:40 IST" finished-at="2023-03-16T14:33:40 IST">
+        <test-method status="PASS" signature="close(org.testng.ITestResult)[pri:0, instance:testScripts.TestFile@706a04ae]" name="close" is-config="true" duration-ms="1" started-at="2023-03-16T15:19:12 IST" finished-at="2023-03-16T15:19:12 IST">
           <params>
             <param index="0">
               <value>
@@ -57,7 +57,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-        <test-method status="PASS" signature="additem(java.lang.String,java.lang.String)[pri:2, instance:testScripts.TestFile@706a04ae]" name="additem" duration-ms="3503" started-at="2023-03-16T14:33:40 IST" data-provider="ProductDetails" finished-at="2023-03-16T14:33:43 IST">
+        <test-method status="PASS" signature="additem(java.lang.String,java.lang.String)[pri:2, instance:testScripts.TestFile@706a04ae]" name="additem" duration-ms="2774" started-at="2023-03-16T15:19:12 IST" data-provider="ProductDetails" finished-at="2023-03-16T15:19:14 IST">
           <params>
             <param index="0">
               <value>
@@ -73,7 +73,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- additem -->
-        <test-method status="PASS" signature="close(org.testng.ITestResult)[pri:0, instance:testScripts.TestFile@706a04ae]" name="close" is-config="true" duration-ms="2" started-at="2023-03-16T14:33:43 IST" finished-at="2023-03-16T14:33:43 IST">
+        <test-method status="PASS" signature="close(org.testng.ITestResult)[pri:0, instance:testScripts.TestFile@706a04ae]" name="close" is-config="true" duration-ms="2" started-at="2023-03-16T15:19:14 IST" finished-at="2023-03-16T15:19:14 IST">
           <params>
             <param index="0">
               <value>
@@ -84,11 +84,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-        <test-method status="PASS" signature="cart()[pri:3, instance:testScripts.TestFile@706a04ae]" name="cart" duration-ms="5256" started-at="2023-03-16T14:33:43 IST" finished-at="2023-03-16T14:33:49 IST">
+        <test-method status="PASS" signature="cart()[pri:3, instance:testScripts.TestFile@706a04ae]" name="cart" duration-ms="5888" started-at="2023-03-16T15:19:14 IST" finished-at="2023-03-16T15:19:20 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cart -->
-        <test-method status="PASS" signature="close(org.testng.ITestResult)[pri:0, instance:testScripts.TestFile@706a04ae]" name="close" is-config="true" duration-ms="1" started-at="2023-03-16T14:33:49 IST" finished-at="2023-03-16T14:33:49 IST">
+        <test-method status="PASS" signature="close(org.testng.ITestResult)[pri:0, instance:testScripts.TestFile@706a04ae]" name="close" is-config="true" duration-ms="2" started-at="2023-03-16T15:19:20 IST" finished-at="2023-03-16T15:19:20 IST">
           <params>
             <param index="0">
               <value>
@@ -99,11 +99,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-        <test-method status="PASS" signature="del_cart()[pri:4, instance:testScripts.TestFile@706a04ae]" name="del_cart" duration-ms="2532" started-at="2023-03-16T14:33:49 IST" depends-on-methods="testScripts.TestFile.cart" finished-at="2023-03-16T14:33:51 IST">
+        <test-method status="PASS" signature="del_cart()[pri:4, instance:testScripts.TestFile@706a04ae]" name="del_cart" duration-ms="2091" started-at="2023-03-16T15:19:20 IST" depends-on-methods="testScripts.TestFile.cart" finished-at="2023-03-16T15:19:22 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- del_cart -->
-        <test-method status="PASS" signature="close(org.testng.ITestResult)[pri:0, instance:testScripts.TestFile@706a04ae]" name="close" is-config="true" duration-ms="1" started-at="2023-03-16T14:33:51 IST" finished-at="2023-03-16T14:33:51 IST">
+        <test-method status="PASS" signature="close(org.testng.ITestResult)[pri:0, instance:testScripts.TestFile@706a04ae]" name="close" is-config="true" duration-ms="7" started-at="2023-03-16T15:19:22 IST" finished-at="2023-03-16T15:19:22 IST">
           <params>
             <param index="0">
               <value>
@@ -114,7 +114,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-        <test-method status="PASS" signature="close()[pri:0, instance:testScripts.TestFile@706a04ae]" name="close" is-config="true" duration-ms="1983" started-at="2023-03-16T14:33:51 IST" finished-at="2023-03-16T14:33:53 IST">
+        <test-method status="PASS" signature="close()[pri:0, instance:testScripts.TestFile@706a04ae]" name="close" is-config="true" duration-ms="1544" started-at="2023-03-16T15:19:22 IST" finished-at="2023-03-16T15:19:24 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
