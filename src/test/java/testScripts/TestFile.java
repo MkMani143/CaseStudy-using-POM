@@ -86,7 +86,7 @@ public class TestFile extends TestBase{
 		  
 	  }
 	
-	@Test(priority=4,dependsOnMethods="cart")
+	@Test(priority=4)
 	  public void purchase() throws InterruptedException{
 		extentTest=reports.createTest("Place Order Test");
 		cartpage.orderDetails();
