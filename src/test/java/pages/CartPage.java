@@ -16,8 +16,6 @@ import base.TestBase;
 public class CartPage extends TestBase{
 	public String priceBefore;
 	public String priceAfter;
-    public int cart_size;
-    public int deleteItem;
     WebDriverWait wait;
     
 	@FindBy(id="cartur")
@@ -69,10 +67,6 @@ public class CartPage extends TestBase{
 	public void cart() throws InterruptedException {
 		wait=new WebDriverWait(driver, Duration.ofSeconds(30));
 		cart.click();
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOfAllElements(ItemsInCart));
-		cart_size = ItemsInCart.size();
-		System.out.println(cart_size);
 		wait.until(ExpectedConditions.visibilityOf(priceAmt));
 		priceBefore = priceAmt.getText();
 		System.out.println(priceBefore);
@@ -82,10 +76,12 @@ public class CartPage extends TestBase{
 	public void delete() throws InterruptedException {
 		wait = new WebDriverWait(driver,Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfAllElements(ItemsInCart));
+		int BeforeDlt = ItemsInCart.size();
+		System.out.println(BeforeDlt);
 		deletebtn.click();
 		Thread.sleep(2000);
-		deleteItem = ItemsInCart.size();
-		System.out.println(deleteItem);
+		int AfterDlt = ItemsInCart.size();
+		System.out.println(AfterDlt);
 		wait.until(ExpectedConditions.visibilityOf(priceAmt));
 		priceAfter = driver.findElement(By.id("totalp")).getText();
 		System.out.println(priceAfter);
@@ -94,7 +90,7 @@ public class CartPage extends TestBase{
 //		String AfterDlt=cartpage.priceAfter;
 		int AfterAmt=Integer.parseInt(priceAfter);
 		Assert.assertNotEquals(BeforeAmt, AfterAmt);
-		Assert.assertEquals(cart_size, deleteItem);
+		Assert.assertNotEquals( BeforeDlt, AfterDlt);
 	}
 	
 	public void orderDetails() throws InterruptedException{
