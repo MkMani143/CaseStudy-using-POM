@@ -9,6 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import base.TestBase;
 
@@ -88,6 +89,12 @@ public class CartPage extends TestBase{
 		wait.until(ExpectedConditions.visibilityOf(priceAmt));
 		priceAfter = driver.findElement(By.id("totalp")).getText();
 		System.out.println(priceAfter);
+//		String BeforeDlt=cartpage.priceBefore;
+		int BeforeAmt=Integer.parseInt(priceBefore);
+//		String AfterDlt=cartpage.priceAfter;
+		int AfterAmt=Integer.parseInt(priceAfter);
+		Assert.assertNotEquals(BeforeAmt, AfterAmt);
+		Assert.assertEquals(cart_size, deleteItem);
 	}
 	
 	public void orderDetails() throws InterruptedException{

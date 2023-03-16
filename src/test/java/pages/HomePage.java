@@ -63,9 +63,7 @@ public class HomePage extends TestBase{
 		WebElement product =driver.findElement(By.partialLinkText(products));
 		wait.until(ExpectedConditions.visibilityOf(product));
 		product.click();
-//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		wait.until(ExpectedConditions.elementToBeClickable(addtocartbtn)).click();
-//		addtocartbtn.click();		
+		wait.until(ExpectedConditions.elementToBeClickable(addtocartbtn)).click();		
 		wait.until(ExpectedConditions.alertIsPresent());
 		alert = driver.switchTo().alert();
 		alert.accept();
